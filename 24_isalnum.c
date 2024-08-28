@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_strncmp.c                                       :+:      :+:    :+:   */
+/*   24_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:02:08 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 13:23:35 by tphoonsi         ###   ########.fr       */
+/*   Created: 2024/08/28 12:45:39 by tphoonsi          #+#    #+#             */
+/*   Updated: 2024/08/28 13:30:24 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, int n)
+int	ft_isalnum(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)
-		i++;
-	if (i == n)
-		return (0);
-	return (s1[i] - s2[i]);
+	return ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'));
 }

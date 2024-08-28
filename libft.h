@@ -6,7 +6,7 @@
 /*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:03:11 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 14:13:21 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:22:39 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
+#include <stddef.h>
 
 typedef unsigned char	t_char;
 typedef unsigned int	t_int;
@@ -41,7 +42,22 @@ int	ft_count(char const *str, char c);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar_fd(char *c, int fd);
-void	ft_putchar(char c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
+size_t	strlcpy(char *dst, const char *src, size_t size);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+char	*ft_strrchr(const char *s, int c);
+void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(char *str, char *src, size_t len);
+char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t count, size_t size);
+
 
 typedef struct	s_list
 {

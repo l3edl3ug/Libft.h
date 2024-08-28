@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_strncmp.c                                       :+:      :+:    :+:   */
+/*   28_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:02:08 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 13:23:35 by tphoonsi         ###   ########.fr       */
+/*   Created: 2024/08/28 12:47:34 by tphoonsi          #+#    #+#             */
+/*   Updated: 2024/08/28 12:47:44 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, int n)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)
-		i++;
-	if (i == n)
-		return (0);
-	return (s1[i] - s2[i]);
+	return ((c >= 'A' && c <= 'Z') ? c + 32 : c);
 }

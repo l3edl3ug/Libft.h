@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   19_count.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:11:43 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 13:11:53 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:25:25 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,15 @@ int	ft_count(char const *str, char c)
 	return (count);
 }
 /*
-int main()
+int	main(void)
 {
-    char str[] = "hello world this is a test";
-    char delimiter = ' ';
-    int count = ft_count(str, delimiter);
-    printf("Number of words: %d\n", count);
-    return 0;
+	char	str[] = "hello world this is a test";
+	char	delimiter;
+	int		count;
+
+	delimiter = ' ';
+	count = ft_count(str, delimiter);
+	printf("Number of words: %d\n", count);
+	return (0);
 }
 */
