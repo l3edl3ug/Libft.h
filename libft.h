@@ -19,7 +19,8 @@
 #include <stdio.h>
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *dest, const char *str);
-size_t	*ft_strlcpy(char *dest, const char *str, size_t size);
+char	*ft_strncpy(char *dest, const char *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 int	ft_strcmp(char *s1, char *s2);
 int	ft_strncmp(char *s1, char *s2, int n);
 char	*ft_strdup(const char *src);
