@@ -12,9 +12,14 @@
 
 #include "libft.h"
 
-char	ft_intlen(long n, int len)
+size_t	ft_intlen(long n)
 {
-	while (n > 0)
+	size_t	len;
+
+	if (n == 0)
+		return (1);
+	len = 0;
+	while (n != 0)
 	{
 		n = n / 10;
 		len++;
