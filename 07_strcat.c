@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   07_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:05:51 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 13:06:04 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:47:57 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, char *str)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
 	i = 0;

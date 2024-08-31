@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   03_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:00:14 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 13:00:27 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:46:14 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && i < n)

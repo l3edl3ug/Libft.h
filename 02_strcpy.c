@@ -6,7 +6,7 @@
 /*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:59:48 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 13:23:14 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:46:37 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dest, const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

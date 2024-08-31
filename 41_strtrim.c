@@ -9,7 +9,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = 0;
-	end = ft_strlen(s1) - 1;
+	end =(int )ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
 	if (start > end)

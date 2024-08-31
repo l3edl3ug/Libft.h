@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   11_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:09:24 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 13:09:36 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:45:23 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s1, int fd)
+void	ft_putstr_fd(char const *s1, int fd)
 {
 	if (*s1 == '\0')
 		return ;

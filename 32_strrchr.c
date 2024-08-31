@@ -6,7 +6,7 @@
 /*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:50:46 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 13:27:28 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:45:00 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = ft_strlen(s);
 	while (i >= 0)

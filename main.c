@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:40:31 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 14:11:51 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 17:42:35 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,27 @@
 
 int	main(void)
 {
-	/*
+	//bzero
+	char array[10] = "HelloWorld"; // อาร์เรย์ขนาด 10 ไบต์ที่มีค่า "HelloWorld"
+	ft_bzero(array, 5); // ล้าง 5 ไบต์แรกของอาร์เรย์ให้เป็นศูนย์
+	// แสดงผลลัพธ์
+	printf("Array after bzero: ");
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d ", array[i]); // แสดงค่าของแต่ละไบต์ในรูปของตัวเลข
+	}
+	printf("\n");;
 	char	s[] = "hello ,world!";
 	char	s2[] = "";
-	//ft_putstr_fd(s,1);
+	ft_putstr_fd(s,1);
 	//char *substring;
 	char	*test;
-    // ใช้ ft_substr โดยเริ่มต้นที่ตำแหน่ง 0 และขอความยาว 30
-    //substring = ft_substr(s, 7, 30);
-	//test = ft_strjoin(s,s2);
+	// ใช้ ft_substr โดยเริ่มต้นที่ตำแหน่ง 0 และขอความยาว 30
+	*substring = ft_substr(s, 7, 30);
+	test = ft_strjoin(s,s2);
     printf("Original string: '%s'\n", s);
-    //printf("Substring: '%s'\n", substring);
-	//printf("ft_strjoin = %s\n",test);
+    printf("Substring: '%s'\n", substring);
+	printf("ft_strjoin = %s\n",test);
 	printf("%s\n", ft_itoa(123));
     printf("%s\n", ft_itoa(-123));
 	printf("%s\n", ft_itoa(0));
@@ -35,12 +44,12 @@ int	main(void)
 	size_t size = 8;
     char dest[20] = "Hello";
     const char *src = "World";
-    //size_t result = ft_strlcat(dest, src, size);
+    size_t result = ft_strlcat(dest, src, size);
 	char s1[] = "   Hello,World!   ";
     char set[] = " ";
     char c = ','
     char **result;
-    */
+    
 /*
     char *trimmed = ft_strtrim(s1, set);
 
@@ -76,11 +85,9 @@ int	main(void)
         free(result[i]);
     free(result);
 
-    return 0;
-
-    //printf("Resulting string: %s\n", dest);
-    //printf("Resulting length: %zu\n", result);
-    //free(test);
+    printf("Resulting string: %s\n", dest);
+    printf("Resulting length: %zu\n", result);
+    free(test);
 
 	return (0);
 }

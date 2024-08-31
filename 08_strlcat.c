@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_strncat.c                                       :+:      :+:    :+:   */
+/*   08_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:06:29 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/24 13:06:43 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:18:42 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest,const char *str, size_t size)
+size_t	ft_strlcat(char *dest, const char *str, size_t size)
 {
 	size_t	i;
 	size_t	j;

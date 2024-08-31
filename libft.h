@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:03:11 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 13:22:39 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:50:32 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strcat(char *dest, char *str);
 size_t	ft_strlcat(char *dest, const char *str, size_t size);
 char	*ft_strchr(const char *str, int c);
 int	ft_isalpha(int c);
-void	ft_putstr(char const *s1, int fd);
+void	ft_putstr_fd(char const *s1, int fd);
 char	*ft_strstr(char *str, char *src);
 int	ft_atoi(char *str);
 char	*ft_itoa(int n);
