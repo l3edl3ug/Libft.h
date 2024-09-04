@@ -12,82 +12,29 @@
 
 #include "libft.h"
 
-
 int	main(void)
 {
-	//bzero
-	char array[10] = "HelloWorld"; // อาร์เรย์ขนาด 10 ไบต์ที่มีค่า "HelloWorld"
-	ft_bzero(array, 5); // ล้าง 5 ไบต์แรกของอาร์เรย์ให้เป็นศูนย์
-	// แสดงผลลัพธ์
-	printf("Array after bzero: ");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%d ", array[i]); // แสดงค่าของแต่ละไบต์ในรูปของตัวเลข
-	}
-	printf("\n");;
-	char	s[] = "hello ,world!";
-	char	s2[] = "";
-	ft_putstr_fd(s,1);
-	//char *substring;
-	char	*test;
-	// ใช้ ft_substr โดยเริ่มต้นที่ตำแหน่ง 0 และขอความยาว 30
-	*substring = ft_substr(s, 7, 30);
-	test = ft_strjoin(s,s2);
-    printf("Original string: '%s'\n", s);
-    printf("Substring: '%s'\n", substring);
-	printf("ft_strjoin = %s\n",test);
-	printf("%s\n", ft_itoa(123));
-    printf("%s\n", ft_itoa(-123));
-	printf("%s\n", ft_itoa(0));
-    printf("%s\n", ft_itoa(-2147483648));
-	
-	size_t size = 8;
-    char dest[20] = "Hello";
-    const char *src = "World";
-    size_t result = ft_strlcat(dest, src, size);
-	char s1[] = "   Hello,World!   ";
-    char set[] = " ";
-    char c = ','
+
     char **result;
+    int i;
+    // ทดสอบ ft_split
+    result = ft_split("Hello, world! This is a test.", ' ');
     
-/*
-    char *trimmed = ft_strtrim(s1, set);
-
-    if (trimmed != NULL)
-    {
-        printf("Trimmed string: '%s'\n", trimmed);
-        free(trimmed);
-    }
-    else
-    {
-        printf("Error: Memory allocation failed or NULL input.\n");
-    }
-*/
-    char *s1 = "hello,world,foo,bar";
-    char c = ',';
-    char **result;  // Declare result as a pointer to a pointer to char
-    char *s2 = "hello";  // Add this line to declare s2
-
-    result = ft_split(s1, c);  // Assign the result of ft_split to result
-
     if (result == NULL)
-        return 1; // error
+    {
+        printf("Memory allocation failed.\n");
+        return (1);
+    }
 
-    int i = 0;
+    // แสดงผลลัพธ์และตรวจสอบ memory leaks
+    i = 0;
     while (result[i] != NULL)
     {
-        printf("Substring %d: %s\n", i, result[i]);
+        printf("result[%d]: %s\n", i, result[i]);
+        free(result[i]);
         i++;
     }
+    free(result);  // free array ที่จัดสรรหน่วยความจำไว้สำหรับ result
 
-    // Don't forget to free the allocated memory!
-    for (i = 0; result[i] != NULL; i++)
-        free(result[i]);
-    free(result);
-
-    printf("Resulting string: %s\n", dest);
-    printf("Resulting length: %zu\n", result);
-    free(test);
-
-	return (0);
+    return (0);
 }
