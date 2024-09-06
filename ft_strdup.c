@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	if (dest == NULL)
 		return (NULL);
 	result = dest;
-	while(*s)
+	while (*s)
 	{
 		*result = *s;
 		s++;

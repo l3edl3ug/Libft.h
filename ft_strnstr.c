@@ -29,7 +29,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 			j++;
 		if (s2[j] == '\0')
 			return ((char *)s1 + i);
-		
 		i++;
 	}
 	return (NULL);

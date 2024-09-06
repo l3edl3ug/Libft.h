@@ -3,7 +3,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char *str;
+	char	*str;
 
 	i = 0;
 	if (s == NULL)
@@ -22,15 +22,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	str[i] = '\0';
 	return (str);
-
 }
 /*
 char const *s รับค่า string array
 unsigned int start รับตัวเลขที่อยากกำหนดว่าจะเริ่มเอาตัวอักษรindexตัวที่เท่าไหร่
 size_t len จำนวนขนาดของstring ที่อยากได้กี่ตัว
 ถ้าขนาดของ array string ลบกับ start แล้วน้อยกว่าขนาด len
-บังคับให้ len เก็บค่า string array ลบกับ start เข้าไปเพื่อกำหนดค่าlenให้พอดีกับ string ที่เราอยากได้
-ลูปwhile หลักถ้า index น้อยกว่า len ที่ถูกกำหนดขนาดแล้ว และ stringที่มีอินเด็กstart และ i รวมกัน ไม่เท่ากับ NULL
+บังคับให้ len เก็บค่า string array ลบกับ start เข้าไป
+เพื่อกำหนดค่าlenให้พอดีกับ string ที่เราอยากได้
+ลูปwhile หลักถ้า index น้อยกว่า len ที่ถูกกำหนดขนาดแล้ว
+และ stringที่มีอินเด็กstart และ i รวมกัน ไม่เท่ากับ NULL
 ให้ ตัวแปรstr[i] เก็บค่า s เริ่มต้นindexที่ [start + i]
 ยกตัวอย่าง:
 str[] = Hello, World! มีขนาด 14;

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 int	main(void)
 {
 
@@ -35,6 +35,8 @@ int	main(void)
         i++;
     }
     free(result);  // free array ที่จัดสรรหน่วยความจำไว้สำหรับ result
+
+    printf("toupper %d\n", ft_isdigit('a'));
 
     return (0);
 }

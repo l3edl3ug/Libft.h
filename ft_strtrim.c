@@ -2,19 +2,19 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int		start;
+	int		end;
 	char	*result;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = 0;
-	end =(int )ft_strlen(s1) - 1;
+	end = (int )ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
 	if (start > end)
 		return (ft_strdup(""));
-	while (ft_strchr(set , s1[end]) && end >= start)
+	while (ft_strchr(set, s1[end]) && end >= start)
 		end--;
 	result = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (result == NULL)

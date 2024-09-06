@@ -59,6 +59,7 @@ static char	**ft_condition(char const *s, char c, char **result)
 	}
 	return (result);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -67,7 +68,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
 	if (result == NULL)
-		return (NULL);	
+		return (NULL);
 	if (ft_condition(s, c, result) == NULL)
 	{
 		free(result);
@@ -82,9 +83,13 @@ char	**ft_split(char const *s, char c)
 ลูปแรก s[i] == c
 เป็นตัวเช็คว่า s[i] เจอตัวขั้นไหม ถ้าเจอให้รับ i++ เพิ่มไป
 กำหนดให้ start = i
-ลูปที่สอง ให้s[i]อ่านค่าสตริงนับไปเรื่อยๆโดยกำหนดs[i]ซ้ำเพื่อให้เข้าconditionของมัน
-และcondition ifคือเมื่อ iมีค่ามากกว่า start นั้นหมายถึงกรณีที่มันเจอตัวขั้น iจะถูก +เพิ่ม และจะไม่ไปทำในเงื่อไขifเพราะ i == start
-ทีนี้ result[j++]จะทำการเก็บค่าarrayเป็นชุดเหมือนกับว่า result[j][substr] และ j ก็เลื่อนไปเรื่องๆถึงตัวถัดไป
+ลูปที่สอง ให้s[i]อ่านค่าสตริงนับไปเรื่อยๆโดยกำหนดs[i]ซ้ำ
+เพื่อให้เข้าconditionของมัน
+และcondition ifคือเมื่อ iมีค่ามากกว่า start 
+นั้นหมายถึงกรณีที่มันเจอตัวขั้น iจะถูก + เพิ่ม
+และจะไม่ไปทำในเงื่อไขifเพราะ i == start
+ทีนี้ result[j++]จะทำการเก็บค่าarrayเป็นชุดเหมือนกับว่า
+ result[j][substr] และ j ก็เลื่อนไปเรื่องๆถึงตัวถัดไป
 ตัวอย่างเช่น:
 เริ่มต้นที่ i = 0, j = 0, result = array of pointers.
 -วนลูปแรก 
@@ -97,7 +102,8 @@ char	**ft_split(char const *s, char c)
 ค้นหาจุดสิ้นสุดของคำ: s[i] เป็น 'd' จนสิ้นสุดสตริง.
 คำที่พบคือ "world", เก็บใน result[j++].
 ทำไม result[j] = NULL
-เพราะว่าresult[j]เป็น array 1มิติเราจะไม่ใช้ '\0' เพราะมันสำหรับจุดสิ้นสุดสตริงนั่นหมายถึงarray 2มิติ
+เพราะว่าresult[j]เป็น array 1มิติเราจะไม่ใช้ '\0' 
+เพราะมันสำหรับจุดสิ้นสุดสตริงนั่นหมายถึงarray 2มิติ
 result[0]: ชี้ไปที่ string "hello"
 result[1]: ชี้ไปที่ string "world"
 result[2]: ชี้ไปที่ NULL เพื่อระบุว่าเป็นจุดสิ้นสุดของ array ของ pointers
