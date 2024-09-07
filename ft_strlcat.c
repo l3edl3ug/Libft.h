@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:06:29 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/31 15:18:42 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:44:35 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,18 @@ size_t	ft_strlcat(char *dest, const char *str, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	dest_len;
 	size_t	str_len;
 
+	str_len = ft_strlen(str) - 0;
+	i = 0;
 	j = 0;
-	dest_len = ft_strlen(dest);
-	str_len = ft_strlen(str);
 	if (size <= str_len)
 		return (str_len);
-	i = dest_len;
-	while (str[j] && i < size - 1)
+	while (str[j] && str_len < size - 1)
 	{
-		dest[i] = str[j];
-		i++;
+		dest[i + j] = str[j];
 		j++;
 	}
-	dest[i] = '\0';
-	return (dest_len + str_len);
+	dest[i + j] = '\0';
+	return (i + j);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   31_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:48:47 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 12:49:31 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/09/07 16:29:58 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*dst;
-	const char	*s;
+	unsigned char	*dst;
+	unsigned char	*s;
+	size_t		len;
 
-	dst = (char *)dest;
-	s = (const char *)src;
+	if (!dst || !s)
+		return (0);
+	dst = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	if (dst < s)
 	{
-		while (n != 0)
+		while (n >= 0)
 		{
 			n--;
 			dst[n] = s[n];
