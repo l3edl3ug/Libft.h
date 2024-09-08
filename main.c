@@ -12,8 +12,14 @@
 
 #include "libft.h"
 #include <stdio.h>
+
+char toupper_wrapper(unsigned int index, char c) {
+    return (char)ft_toupper((int)c);
+}
 int	main(void)
 {
+
+    printf("result = %d\n",ft_atoi((void*)0));
 
     char **result;
     int i;
@@ -36,7 +42,11 @@ int	main(void)
     }
     free(result);  // free array ที่จัดสรรหน่วยความจำไว้สำหรับ result
 	//fuction_is family
-    printf("toupper %s\n", ft_strmapi("hello",ft_toupper()));
+    printf("toupper %s\n", ft_strmapi("hello",toupper_wrapper));
+    char str[] = "Hello, World!";
+    ft_memmove(str + 7, str, 5);
+    printf("%s", str);
+
 /*
 	//strrchr
     const char str[] = "Hello, world!";

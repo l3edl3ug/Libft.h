@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i])
 		i++;
@@ -27,7 +27,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return ((char *)&s[i]);
 }
-
 /*
 work like ft_strchr but it search from the right to left
 */

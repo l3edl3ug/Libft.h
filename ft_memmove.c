@@ -16,41 +16,55 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dst;
 	unsigned char	*s;
-	size_t		len;
 
-	if (!dst || !s)
+	if (!dest && !src)
 		return (0);
 	dst = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	if (dst < s)
 	{
-		while (n >= 0)
-		{
-			n--;
-			dst[n] = s[n];
-		}
+		while (n--)
+			*dst++ = *s++;
 	}
 	else
-		ft_memcpy(dst, s, n);
+	{
+		dst += n;
+		s += n;
+		while (n--)
+			*--dst = *--s;
+	}
 	return (dest);
 }
 /*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
+ n-- (Post-decrement)
+n-- เป็นการลดค่าของ n ลง 1 หลังจาก ที่ได้ใช้ค่า n ในขณะนั้นแล้ว
+while (n > 0) 
 {
-	char dest1[20];
-	char src[] = "hello, world!";
-	ft_memmove(dest1,src,13);
-	printf("Test 1 > %s\n",dest1);
-	//ทดสอบ src และ dest1 ทับซ้อนกัน (from back to front)
-	char overlap1[20] = "abcdef";
-	ft_memmove(overlap1 + 2,overlap1,4);
-	printf("test 2 > %s\n",overlap1);
-	//ทดสอบ src และ dest1 ทับซ้อนกัน(from front to back)
-	char overlap2[20] = "abcdef";
-	char dest2[20];
-	ft_memmove(dest2,overlap2 + 2, 4);
-	printf("Test 3 > %s\n",overlap2);
+    *dst++ = *s++;
+    n--;
 }
+กรณี dst อยู่ก่อน src (dst < src):
+
+ข้อมูลจะถูกคัดลอกจากซ้ายไปขวา (จากตำแหน่งต้นทางไปยังตำแหน่งปลายทาง)
+ใช้ลูปที่คัดลอกข้อมูลทีละบิตจากต้นทาง (src) 
+ไปยังปลายทาง (dst) โดยเริ่มจากตำแหน่งแรก
+
+กรณี dst อยู่หลัง src (dst > src):
+ข้อมูลจะถูกคัดลอกจากขวาไปซ้าย(จากตำแหน่งสุดท้ายของช่วงข้อมูล
+ไปยังตำแหน่งต้นของช่วงข้อมูล)
+ใช้ลูปที่คัดลอกข้อมูลจากปลายทาง (dst) ไปยังต้นทาง (src) โดยเริ่มจากตำแหน่งสุดท้าย
+โดยทั่วไปแล้ว:
+
+if (dst < src): ใช้เมื่อ dst อยู่ก่อน src 
+เพื่อให้แน่ใจว่าข้อมูลจะถูกคัดลอกจากซ้ายไปขวา
+else: ใช้เมื่อ dst อยู่หลัง src เพื่อให้แน่ใจว่าข้อมูลจะถูกคัดลอกจากขวาไปซ้าย
+ยกตัวอย่าง
+สมมุติว่า char arr[14] = "Hello, World!"
+char *dest = &arr[2]
+int	n = 5;
+dst += n ก็คือ W
+และถ้า ft_memmove(str,str + 7,6);
+output ก็จะได้ World!, World!
+และถ้า ft_memmove(str + 7, str,5);
+Hello, Hello, World!
 */
