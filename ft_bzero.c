@@ -18,13 +18,18 @@ void	ft_bzero(void *s, size_t n)
 		ft_memset(s, 0, n);
 }
 /*
-#include <stdio.h>
-
-void	ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-
+ฟังก์ชัน ft_bzero ทำหน้าที่เคลียร์หรือรีเซ็ตบล็อกของหน่วยความจำให้เป็นศูนย์ (0)
+สำหรับจำนวนไบต์ที่ระบุโดยพารามิเตอร์ n และใช้ฟังก์ชัน ft_memset
+เพื่อเติมค่า 0 ในบล็อกหน่วยความจำที่ชี้โดยพารามิเตอร์ s.
 int	main(void)
 {
-	
+	char str[50] = "Hello, World!";
+	ft_bzero(str + 7, 6);  // เคลียร์ 6 ไบต์ที่เริ่มจาก index 7
+	printf("Result: %s\n", str); // จะได้ผลลัพธ์: Hello,
+
 }
+ทีนี้ที่ผลลัพท์มันได้ Hello, ไม่ใช่ Hello, 00000
+เพราะว่า 0 นั้นก็คือ null terminate
+และที่มันออกมาแค่ Hello, เป็นเพราะฟังก์ชั่น printf
+มันจะไม่แสดงค่า 0 ของสตริงออกมา
 */

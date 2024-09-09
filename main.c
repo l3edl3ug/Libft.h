@@ -18,8 +18,15 @@ char toupper_wrapper(unsigned int index, char c) {
 }
 int	main(void)
 {
+/*
+    printf("result = %d\n",ft_atoi("123"));
 
-    printf("result = %d\n",ft_atoi((void*)0));
+    const char haystack[] = "Hello, this is a simple test.";
+	const char needle[] = "this";
+	char	*result0;
+
+	result0 = ft_strnstr(haystack, needle, 30);
+	printf("Found '%s' in '%s' -> '%s'\n", needle, haystack, result0);
 
     char **result;
     int i;
@@ -45,7 +52,15 @@ int	main(void)
     printf("toupper %s\n", ft_strmapi("hello",toupper_wrapper));
     char str[] = "Hello, World!";
     ft_memmove(str + 7, str, 5);
-    printf("%s", str);
+    printf("%s\n",str);
+    */
+    const char *str = "Hello, World!";
+    char ch = 'o';
+    char *result = ft_strrchr(str, ch);
+
+    printf("The last occurrence of '%c' is at position %ld.\n", ch, result - str);
+    printf("The substring from the last occurrence is: %s\n", result);
+
 
 /*
 	//strrchr

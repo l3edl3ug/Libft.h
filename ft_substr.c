@@ -38,7 +38,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 char const *s รับค่า string array
 unsigned int start รับตัวเลขที่อยากกำหนดว่าจะเริ่มเอาตัวอักษรindexตัวที่เท่าไหร่
-size_t len จำนวนขนาดของstring ที่อยากได้กี่ตัว
+	if (ft_strlen(s) <= start)
+		return (ft_strdup(""));
+-เงื่อไขนี้สำหรับที่ ถ้าstartที่เราระบุในparameterไม่อยู่ในindexของ
+ *s ให้สร้างค่าว่าง เพราะมันหาไม่เจอ
+-----------------------------------------------
+-size_t len จำนวนขนาดของstring ที่อยากได้กี่ตัว
 ถ้าขนาดของ array string ลบกับ start แล้วน้อยกว่าขนาด len
 บังคับให้ len เก็บค่า string array ลบกับ start เข้าไป
 เพื่อกำหนดค่าlenให้พอดีกับ string ที่เราอยากได้

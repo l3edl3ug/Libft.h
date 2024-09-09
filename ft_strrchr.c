@@ -28,5 +28,12 @@ char	*ft_strrchr(const char *s, int c)
 	return ((char *)&s[i]);
 }
 /*
-work like ft_strchr but it search from the right to left
+ทำงานเหมือน strchr แต่ค้นจากด้านขวาสุดของสตริงไปยังฝั่งซ้ายสุด
+	const char *str = "Hello, World!";
+    char ch = 'o';
+    char *result = ft_strrchr(str, ch);
+
+    printf("Found '%c' is at position %ld.\n", ch, result - str);
+    printf("result = %s\n", result);
+
 */

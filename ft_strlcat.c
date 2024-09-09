@@ -31,3 +31,19 @@ size_t	ft_strlcat(char *dest, const char *str, size_t size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + str_len);
 }
+/*
+ฟังก์ชั่นนี้จะสามารถทำหน้าที่ได้ 2 แบบ:
+1.คือเราต้องการอยากดูความยาวสตริงผลรวมทั้ง destและstr
+2.คือเราอยากรู้ว่า dest หลังจากเรากำหนดsizeไปแล้วมันจะมาต่อกันยังไง
+ยกตัวอย่าง:
+	char dest[4] = "he";
+    const char *str = "llo, world!";
+    size_t size = 4;
+
+    size_t result = ft_strlcat(dest, str, size);
+
+    printf("Result: %zu\n", result);
+    printf("Dest: %s\n", dest);
+	
+	%zu เป็นตัวแสดงรูปแบบที่เหมาะสำหรับ size_t ในการพิมพ์ค่า.
+*/

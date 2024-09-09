@@ -39,3 +39,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i] = '\0';
 	return (result);
 }
+/*
+ฟังก์ชั่นนี้คล้ายๆกับ strcat แต่จะต่างกันตรงที่มีการจัดสรร
+memoryไว้ให้หลังจากที่เอาstringทั้ง2มาเชื่อมกัน
+*/

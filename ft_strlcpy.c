@@ -28,3 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+/*
+คล้ายกับ strlcat แต่อันนี้จะเป็นการcopy src ไป dst
+และสามารถเรียกดูค่าได้2แบบเหมือนกัน
+*/

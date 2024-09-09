@@ -55,3 +55,10 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+/*while (len > start)
+{
+    len--;                    // ลดค่า len ลง 1 ก่อน
+    str[len] = '0' + (num % 10);
+    num = num / 10;
+}
+*/

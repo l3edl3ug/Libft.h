@@ -66,5 +66,6 @@ dst += n ก็คือ W
 และถ้า ft_memmove(str,str + 7,6);
 output ก็จะได้ World!, World!
 และถ้า ft_memmove(str + 7, str,5);
-Hello, Hello, World!
+Hello, Hello!
+ft_memove(ตัวเริ่มต้น, ตัวที่อยากเอามาใส่ตัวเริ่มต้น, จำนวนที่อยากเอา)
 */
