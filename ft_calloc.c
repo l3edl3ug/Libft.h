@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   37_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tphoonsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:53:26 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/08/28 12:53:31 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/09/10 15:01:24 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,17 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
+	size_t	lenght;
 	void	*ptr;
 
-	ptr = (void *)malloc(count * size);
+	lenght = size * count;
+	if (count == 0 || size == 0)
+		return (malloc(0));
+	else if ((long)count < 0 || (long) size < 0)
+		return (NULL);
+	ptr = (void *)malloc(lenght);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, count * size);
+	ft_bzero(ptr, lenght);
 	return (ptr);
 }

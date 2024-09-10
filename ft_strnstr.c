@@ -6,7 +6,7 @@
 /*   By: tphoonsi <tphoonsi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:52:32 by tphoonsi          #+#    #+#             */
-/*   Updated: 2024/09/07 15:20:14 by tphoonsi         ###   ########.fr       */
+/*   Updated: 2024/09/10 12:23:40 by tphoonsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	i = 0;
 	if (!s1 && !s2)
-		return ('\0');
-	if (s2[0] == '\0')
+		return (0);
+	if (s2[0] == 0)
 		return ((char *)s1);
 	while (s1[i] && i < n)
 	{
