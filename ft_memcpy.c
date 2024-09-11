@@ -44,4 +44,6 @@ int	main(void)
 	printf("mine > %s\n",dest1);
 	printf("string.h > %s\n",dest2);
 }
+ข้อควรระวัง!! ห้ามใช้ฟังก์ชั่นนี้กรณีที่src และ dst ทับซ้อนกัน (overlap)
+มันจะทำให้ข้อมูลเสียหาย
 */
